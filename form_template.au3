@@ -139,19 +139,19 @@ Func NameAndDate()
 	AdobeCheck()
 		If @error Then Return
 
-    ClipPut($email)                                     ;Inserts e-mail
+    ClipPut($email)                                     ; Inserts e-mail
     Send("^v")
-	Sleep(50)                                           ;Has to sleep due to a bug
+	Sleep(50)                                       ; Has to sleep due to a bug
 
-    Send("{TAB}") 										;Presses "tab"
-	Sleep(50)                                           ;Has to sleep due to a bug
+    Send("{TAB}") 					; Presses "tab"
+	Sleep(50)                                       ; Has to sleep due to a bug
 
-    $year = @YEAR 										;Get the current date components
+    $year = @YEAR 					; Get the current date components
     $month = StringFormat("%02d", @MON)
     $day = StringFormat("%02d", @MDAY)
-    $todaysDate = $year & "-" & $month & "-" & $day 	;Combine them into the desired format YYYY-MM-DD
+    $todaysDate = $year & "-" & $month & "-" & $day 	; Combine them into the desired format YYYY-MM-DD
 
-	ClipPut($todaysDate)                                ;Inserts date
+	ClipPut($todaysDate)                            ; Inserts date
     Send("^v")
 
 EndFunc
@@ -161,7 +161,7 @@ Func Template_1()
 
 	AdobeCheck()
 		If @error Then Return
-    ClipPut($template_1) ; Makes the pasting instant
+    ClipPut($template_1)     ; Makes the pasting instant
     Send("^v") 		     ; Makes the pasting instant
 
 EndFunc
